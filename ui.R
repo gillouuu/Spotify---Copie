@@ -42,15 +42,33 @@ ui <- dashboardPage(skin = "black",
                         valueBoxOutput("numGenre", width = 6),
                         
                         br(),
-                        fluidRow(
-                         #...
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                        br(),
+                
+                        fluidRow(box(plotlyOutput("tracksPerYearArtistPlot")),
+                                 box(plotlyOutput("genrePopularityPlot"))
+
+
+
                         )
-                      )))
-                    #   br(), 
-                    #   box(title = "Track & playlist presence", 
-                    #       #...,
-                    #   )
-                    #   
-                    # )
+                      ),
+                       br(), 
+                      box(title = "Track & playlist presence",
+                          dataTableOutput("datatable_track")
+                      )
+
+                    ))
 
 
